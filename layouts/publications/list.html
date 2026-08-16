@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Publications — Ananya D</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23271510'/><stop offset='100%25' stop-color='%23b87b6a'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='72' font-family='Georgia,serif' font-size='58' font-style='italic' font-weight='400' fill='%23fefaf6' text-anchor='middle'>A</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:   #fefaf6;
+  --cream:   #f8f2eb;
+  --blush:   #f2e5da;
+  --rose:    #e2c8bc;
+  --dusty:   #b87b6a;
+  --deep:    #8c3d2a;
+  --plum:    #271510;
+  --muted:   #7a6058;
+  --faint:   #c8b0a4;
+  --rule:    #e8d5cc;
+  --sage:    #e2ead8;
+  --sage-dk: #4e7244;
+  --amber:   #c07838;
+  --amber-lt:#f5e8d4;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--plum);line-height:1.75;overflow-x:hidden}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 3.5rem;
+  background:rgba(254,250,246,.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--rule);
+}
+.n-logo{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--plum);text-decoration:none;}
+.n-logo em{font-style:italic;color:var(--dusty);}
+.n-links{display:flex;gap:2.25rem;list-style:none;}
+.n-links a,.n-links span{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.n-links a:hover{color:var(--deep);}
+.n-contact{
+  font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.48rem 1.2rem;border-radius:50px;
+  background:var(--plum);color:var(--paper);
+  text-decoration:none;transition:background .2s;
+}
+.n-contact:hover{background:var(--deep);}
+
+/* ─── SHARED SECTION ─── */
+.section{padding:7rem 3.5rem;}
+.section.alt{background:var(--cream);}
+
+.s-top{margin-bottom:4rem;}
+.s-eyebrow{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.s-eyebrow.neutral{color:var(--dusty);}
+.s-eyebrow::before{content:'';width:1.5rem;height:1px;background:currentColor;}
+.s-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .7rem;border-radius:50px;}
+.sl-phd{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+
+.s-title{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,3.5vw,3rem);
+  line-height:1.1;color:var(--plum);
+}
+.s-title em{font-style:italic;color:var(--dusty);}
+.s-sub{
+  font-size:.92rem;font-weight:300;color:var(--muted);
+  max-width:36rem;line-height:1.85;margin-top:.85rem;
+}
+.ra-link{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dk);text-decoration:none;border-bottom:1.5px solid rgba(78,114,68,.3);padding-bottom:1px;transition:all .2s;}
+.ra-link:hover{border-color:var(--sage-dk);}
+
+/* ─── PUBLICATIONS ─── */
+.pub-list{display:flex;flex-direction:column;}
+.pub-row{
+  display:grid;grid-template-columns:5rem 1fr auto;
+  gap:2rem;padding:2rem 0;
+  border-bottom:1px solid var(--rule);align-items:start;
+  transition:padding-left .2s;
+}
+.pub-row:hover{padding-left:.5rem;}
+.pub-row:first-child{border-top:1px solid var(--rule);}
+.pub-yr{font-family:'Instrument Serif',serif;font-style:italic;font-size:.92rem;color:var(--dusty);padding-top:.2rem;}
+.pub-pill{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;border-radius:50px;margin-bottom:.5rem;}
+.pp-chi{background:rgba(140,61,42,.1);color:var(--deep);}
+.pp-facct{background:rgba(140,61,42,.1);color:var(--deep);}
+.pp-nat{background:rgba(78,114,68,.1);color:var(--sage-dk);}
+.pp-cscw{background:var(--amber-lt);color:var(--amber);}
+.pub-title{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--plum);line-height:1.35;margin-bottom:.4rem;}
+.pub-desc{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.7;}
+.pub-links{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;}
+.pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;}
+.pub-lnk:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
+
+/* ─── FOOTER ─── */
+footer{
+  background:#1c0d08;padding:1.6rem 3.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.on{opacity:1;transform:translateY(0);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  nav{padding:0 1.5rem;}
+  .n-links{display:none;}
+  .section{padding:5rem 1.75rem;}
+  .pub-row{grid-template-columns:1fr;}
+  .pub-yr{display:none;}
+  .pub-links{flex-direction:row;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="n-logo" href="/">Ananya <em>D.</em></a>
+  <ul class="n-links">
+    <li><a href="/#building">Building</a></li>
+    <li><a href="/#experience">Experience</a></li>
+  </ul>
+  <a class="n-contact" href="/#contact">Get in Touch</a>
+</nav>
+
+<!-- PUBLICATIONS -->
+<section class="section" style="padding-top:9rem;">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Publications</span></div>
+    <h2 class="s-title">All <em>publications</em></h2>
+    <p class="s-sub">The complete list of peer-reviewed papers and preprints.</p>
+  </div>
+  <div class="pub-list">
+    <div class="pub-row reveal">
+      <div class="pub-yr">2024</div>
+      <div>
+        <span class="pub-pill pp-chi">CHI 2024</span>
+        <div class="pub-title">Generative AI and the Crisis of Digital Identity: Challenges and Mitigations</div>
+        <div class="pub-desc">How generative models systematically undermine identity verification pipelines — and a layered framework of detection, provenance, and policy responses grounded in empirical failure analysis.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">arXiv</a></div>
+    </div>
+    <div class="pub-row reveal">
+      <div class="pub-yr">2024</div>
+      <div>
+        <span class="pub-pill pp-facct">FAccT 2024</span>
+        <div class="pub-title">A Framework for Auditing Large Language Models: Dimensions of Trustworthiness</div>
+        <div class="pub-desc">A systematic audit framework spanning robustness, fairness, calibration, and alignment — validated across six real-world deployment contexts. The foundation of the TrustAI Toolkit.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">Code</a></div>
+    </div>
+    <div class="pub-row reveal">
+      <div class="pub-yr">2023</div>
+      <div>
+        <span class="pub-pill pp-cscw">CSCW 2023</span>
+        <div class="pub-title">Human-AI Teaming for High-Stakes Decision Making: Lessons from the Field</div>
+        <div class="pub-desc">Findings from a multi-site field study of human-AI teaming in clinical triage, financial risk assessment, and content moderation — drawing on 120+ interviews to identify recurring failure modes and design principles that preserve meaningful human agency.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">arXiv</a></div>
+    </div>
+    <div class="pub-row reveal">
+      <div class="pub-yr">2023</div>
+      <div>
+        <span class="pub-pill pp-nat">Nature Machine Intelligence</span>
+        <div class="pub-title">Misinformation Cascades in Generative Media Ecosystems</div>
+        <div class="pub-desc">Longitudinal study of how AI-generated content propagates through platforms, amplifying misinformation and reshaping what populations believe about contested events.</div>
+      </div>
+      <div class="pub-links"><a class="pub-lnk" href="#">DOI</a><a class="pub-lnk" href="#">PDF</a><a class="pub-lnk" href="#">arXiv</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Ananya D. (she/her)</span>
+  <a href="/" style="font-size:.7rem;color:rgba(255,255,255,.35);letter-spacing:.05em;text-decoration:none;">← Back to home</a>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const idx=Array.from(e.target.parentNode.children).indexOf(e.target);
+      e.target.style.transitionDelay=(idx%4)*.1+'s';
+      e.target.classList.add('on');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
