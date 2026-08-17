@@ -29,8 +29,10 @@ jobs:
         run: |
           mkdir -p _site/images
           mkdir -p _site/publications
+          mkdir -p _site/blog
           cp layouts/landing/list.html _site/index.html
           cp layouts/publications/list.html _site/publications/index.html
+          cp layouts/blog/list.html _site/blog/index.html
           cp -r static/images/. _site/images/
           cp "static/images/Firefly_Gemini Flash_change the portrait color to the background color of the second banner image without  800479 (1).png" _site/images/profile.png
 

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Personal Blogs — Ananya D</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23271510'/><stop offset='100%25' stop-color='%23b87b6a'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='72' font-family='Georgia,serif' font-size='58' font-style='italic' font-weight='400' fill='%23fefaf6' text-anchor='middle'>A</text></svg>"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --paper:   #fefaf6;
+  --cream:   #f8f2eb;
+  --blush:   #f2e5da;
+  --rose:    #e2c8bc;
+  --dusty:   #b87b6a;
+  --deep:    #8c3d2a;
+  --plum:    #271510;
+  --muted:   #7a6058;
+  --faint:   #c8b0a4;
+  --rule:    #e8d5cc;
+  --sage:    #e2ead8;
+  --sage-dk: #4e7244;
+  --amber:   #c07838;
+  --amber-lt:#f5e8d4;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--plum);line-height:1.75;overflow-x:hidden}
+
+/* ─── NAV ─── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  height:64px;display:flex;align-items:center;justify-content:space-between;
+  padding:0 3.5rem;
+  background:rgba(254,250,246,.95);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--rule);
+}
+.n-logo{font-family:'Instrument Serif',serif;font-size:1.15rem;color:var(--plum);text-decoration:none;}
+.n-logo em{font-style:italic;color:var(--dusty);}
+.n-links{display:flex;gap:2.25rem;list-style:none;}
+.n-links a,.n-links span{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color .2s;}
+.n-links a:hover{color:var(--deep);}
+.n-contact{
+  font-size:0.7rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.48rem 1.2rem;border-radius:50px;
+  background:var(--plum);color:var(--paper);
+  text-decoration:none;transition:background .2s;
+}
+.n-contact:hover{background:var(--deep);}
+
+/* ─── SHARED SECTION ─── */
+.section{padding:7rem 3.5rem;}
+.section.alt{background:var(--cream);}
+
+.s-top{margin-bottom:4rem;}
+.s-eyebrow{
+  display:flex;align-items:center;gap:.75rem;
+  font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  margin-bottom:1rem;
+}
+.s-eyebrow.neutral{color:var(--dusty);}
+.s-eyebrow::before{content:'';width:1.5rem;height:1px;background:currentColor;}
+.s-label{display:inline-flex;align-items:center;gap:.4rem;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .7rem;border-radius:50px;}
+.sl-founder{background:rgba(140,61,42,.1);color:var(--deep);}
+
+.s-title{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,3.5vw,3rem);
+  line-height:1.1;color:var(--plum);
+}
+.s-title em{font-style:italic;color:var(--dusty);}
+.s-sub{
+  font-size:.92rem;font-weight:300;color:var(--muted);
+  max-width:36rem;line-height:1.85;margin-top:.85rem;
+}
+.ra-link{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dk);text-decoration:none;border-bottom:1.5px solid rgba(78,114,68,.3);padding-bottom:1px;transition:all .2s;}
+.ra-link:hover{border-color:var(--sage-dk);}
+.s-top ul{margin-top:1.5rem;padding-left:1.25rem;color:var(--muted);font-size:.9rem;font-weight:300;}
+
+/* ─── FOOTER ─── */
+footer{
+  background:#1c0d08;padding:1.6rem 3.5rem;
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(255,255,255,.05);
+}
+footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
+
+/* ─── ANIMATIONS ─── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.on{opacity:1;transform:translateY(0);}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:960px){
+  nav{padding:0 1.5rem;}
+  .n-links{display:none;}
+  .section{padding:5rem 1.75rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="n-logo" href="/">Ananya <em>D.</em></a>
+  <ul class="n-links">
+    <li><a href="/#building">Building</a></li>
+    <li><a href="/#experience">Experience</a></li>
+  </ul>
+  <a class="n-contact" href="/#contact">Get in Touch</a>
+</nav>
+
+<!-- PERSONAL BLOGS -->
+<section class="section" style="padding-top:9rem;">
+  <div class="s-top reveal">
+    <div class="s-eyebrow neutral"><span class="s-label sl-founder">Personal Blogs</span></div>
+    <h2 class="s-title">Things I <em>write about</em></h2>
+    <p class="s-sub">Occasional posts on research, building, and everything in between. <a class="ra-link" href="/#blog">← Back to homepage</a></p>
+    <ul><li>To be updated</li></ul>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 Ananya D. (she/her)</span>
+  <a href="/" style="font-size:.7rem;color:rgba(255,255,255,.35);letter-spacing:.05em;text-decoration:none;">← Back to home</a>
+</footer>
+
+<script>
+const io = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const idx=Array.from(e.target.parentNode.children).indexOf(e.target);
+      e.target.style.transitionDelay=(idx%4)*.1+'s';
+      e.target.classList.add('on');
+      io.unobserve(e.target);
+    }
+  });
+},{threshold:.08,rootMargin:'0px 0px -24px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
