@@ -26,6 +26,15 @@ sections:
       columns: '1'
 
   - block: markdown
+    id: blog
+    content:
+      title: Blog
+      text: |
+        - To be updated
+    design:
+      columns: '1'
+
+  - block: markdown
     id: research
     content:
       title: Research
