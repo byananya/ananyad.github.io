@@ -357,10 +357,19 @@ nav{
 .pub-authors{font-size:.72rem;font-weight:500;color:var(--dusty);margin-bottom:.4rem;}
 .pub-desc{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.7;}
 .pub-links{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;}
-.pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;}
+.pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;background:none;font-family:inherit;cursor:pointer;}
 .pub-lnk:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
 .pub-lnk-zenodo{background:var(--sage-dk);color:#fff;border-color:var(--sage-dk);box-shadow:0 2px 6px rgba(78,114,68,.35);}
 .pub-lnk-zenodo:hover{background:#3d5c36;border-color:#3d5c36;color:#fff;}
+.pub-lnk-abstract[aria-expanded="true"]{background:var(--deep);color:#fff;border-color:var(--deep);}
+.pub-lnk[aria-disabled="true"]{opacity:.4;cursor:not-allowed;}
+.pub-lnk[aria-disabled="true"]:hover{background:none;color:var(--deep);border-color:var(--rule);}
+.pub-abstract{
+  grid-column:1/-1;margin-top:1rem;padding:1.1rem 1.25rem;
+  border:1px dashed var(--rule);border-radius:8px;background:var(--cream);
+  font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.75;
+}
+.pub-abstract[hidden]{display:none;}
 
 /* ─── OPEN QUESTIONS ─── */
 .q-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;}
@@ -735,8 +744,15 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
         <div class="pub-title">Identity Persistence in AI-Generated Video: A Sequence Evaluation Framework for Founder-Led Outbound</div>
         <div class="pub-authors">Ananya Das</div>
         <div class="pub-desc">A framework for evaluating identity consistency across sequences of AI-generated video, grounded in founder-led outbound experimentation at Pulse AI.</div>
+        <div class="pub-abstract" id="pub-abstract-1" hidden>
+          AI video tools are built and benchmarked to produce one good clip. Founder-led outbound does not sell in one clip, it sells across a sequence, and the sender is the trust signal carrying it. When the face or visual style shifts between the first outreach and the follow-up, the recipient stops believing the message came from a person and stops replying; the commercial cost of that shift is unmeasured because no existing benchmark looks across outputs. This paper defines that failure mode as identity drift and specifies an evaluation framework that treats an outbound sequence, not a single video, as the unit of analysis. Three metrics are defined: face persistence, style persistence, and a composite Sequence Persistence Score (SPS). A sequence passes only if the sender remains recognizably the same person across every moment in it. The generation pipeline is proprietary; the evaluation protocol is published in full so that any comparable pipeline can be scored against the same thresholds.
+        </div>
       </div>
-      <div class="pub-links"><a class="pub-lnk pub-lnk-zenodo" href="https://zenodo.org/records/21620531" target="_blank" rel="noopener">Zenodo</a></div>
+      <div class="pub-links">
+        <button type="button" class="pub-lnk pub-lnk-abstract" aria-expanded="false" aria-controls="pub-abstract-1">Abstract</button>
+        <a class="pub-lnk" href="#" aria-disabled="true" tabindex="-1" title="Coming soon">PDF</a>
+        <a class="pub-lnk pub-lnk-zenodo" href="https://zenodo.org/records/21620531" target="_blank" rel="noopener">Zenodo</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1090,6 +1106,19 @@ const io = new IntersectionObserver(entries=>{
   });
 },{threshold:.08,rootMargin:'0px 0px -24px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+document.querySelectorAll('.pub-lnk-abstract').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const box=document.getElementById(btn.getAttribute('aria-controls'));
+    if(!box) return;
+    const open=btn.getAttribute('aria-expanded')==='true';
+    btn.setAttribute('aria-expanded',String(!open));
+    box.hidden=open;
+  });
+});
+document.querySelectorAll('.pub-lnk[aria-disabled="true"]').forEach(a=>{
+  a.addEventListener('click',e=>e.preventDefault());
+});
 </script>
 </body>
 </html>
