@@ -1,6 +1,6 @@
 # Ananya D — Personal Blog
 
-Personal academic website built with [HugoBlox](https://hugoblox.com/) (Academic CV template). Clean, minimal, single-column.
+Personal website built with [HugoBlox](https://hugoblox.com/) (Academic CV template). Clean, minimal, single-column.
 
 ## Prerequisites
 
