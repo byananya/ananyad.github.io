@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Publications — Ananya D</title>
+<title>Blog — Ananya D</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23271510'/><stop offset='100%25' stop-color='%23b87b6a'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='72' font-family='Georgia,serif' font-size='58' font-style='italic' font-weight='400' fill='%23fefaf6' text-anchor='middle'>A</text></svg>"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -78,7 +78,7 @@ nav{
 .ra-link{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dk);text-decoration:none;border-bottom:1.5px solid rgba(78,114,68,.3);padding-bottom:1px;transition:all .2s;}
 .ra-link:hover{border-color:var(--sage-dk);}
 
-/* ─── PUBLICATIONS ─── */
+/* ─── POST LIST (reuses publication-row layout) ─── */
 .pub-list{display:flex;flex-direction:column;}
 .pub-row{
   display:grid;grid-template-columns:5rem 1fr auto;
@@ -89,20 +89,14 @@ nav{
 .pub-row:hover{background-color:var(--cream);}
 .pub-row:first-child{border-top:1px solid var(--rule);}
 .pub-yr{font-family:'Instrument Serif',serif;font-style:italic;font-size:.92rem;color:var(--dusty);padding-top:.2rem;}
-.pub-pill{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;border-radius:50px;margin-bottom:.5rem;}
-.pp-chi{background:rgba(140,61,42,.1);color:var(--deep);}
-.pp-facct{background:rgba(140,61,42,.1);color:var(--deep);}
-.pp-nat{background:rgba(78,114,68,.1);color:var(--sage-dk);}
-.pp-cscw{background:var(--amber-lt);color:var(--amber);}
-.pp-preprint{background:var(--amber-lt);color:var(--amber);}
-.pub-title{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--plum);line-height:1.35;margin-bottom:.4rem;}
-.pub-authors{font-size:.72rem;font-weight:500;color:var(--dusty);margin-bottom:.4rem;}
+.pub-title{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--plum);line-height:1.35;margin-bottom:.4rem;}
+.pub-title a{color:inherit;text-decoration:none;}
+.pub-title a:hover{color:var(--deep);}
 .pub-desc{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.7;}
 .pub-links{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;}
 .pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;}
 .pub-lnk:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
-.pub-lnk-zenodo{background:var(--sage-dk);color:#fff;border-color:var(--sage-dk);box-shadow:0 2px 6px rgba(78,114,68,.35);}
-.pub-lnk-zenodo:hover{background:#3d5c36;border-color:#3d5c36;color:#fff;}
+.empty-state{font-size:.85rem;font-weight:300;color:var(--muted);padding:2rem 0;border-top:1px solid var(--rule);}
 
 /* ─── FOOTER ─── */
 footer{
@@ -140,25 +134,22 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   <a class="n-contact" href="/#contact">Get in Touch</a>
 </nav>
 
-<!-- PUBLICATIONS -->
+<!-- BLOG -->
 <section class="section" style="padding-top:9rem;">
   <div class="s-top reveal">
-    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Publications</span></div>
-    <h2 class="s-title">All <em>publications</em></h2>
-    <p class="s-sub">The complete list of peer-reviewed papers and working papers. <a class="ra-link" href="/#publications">View selected publications →</a></p>
+    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Blog</span></div>
+    <h2 class="s-title">Notes &amp; <em>writing</em></h2>
+    <p class="s-sub">Thoughts on AI, research, and building — posted as they come.</p>
   </div>
 
   <div class="pub-list">
-    <div class="pub-row reveal">
-      <div class="pub-yr">2026</div>
-      <div>
-        <span class="pub-pill pp-preprint">Working Paper</span>
-        <div class="pub-title">Identity Persistence in AI-Generated Video: A Sequence Evaluation Framework for Founder-Led Outbound</div>
-        <div class="pub-authors">Ananya Das</div>
-        <div class="pub-desc">A framework for evaluating identity consistency across sequences of AI-generated video, grounded in founder-led outbound experimentation at Pulse AI.</div>
-      </div>
-      <div class="pub-links"><a class="pub-lnk pub-lnk-zenodo" href="https://zenodo.org/records/21620531" target="_blank" rel="noopener">Zenodo</a></div>
-    </div>
+    <!--
+      To add a new post:
+      1. Add a page at layouts/blog/posts/<slug>.html (copy layouts/blog/_post-template.html)
+      2. Add a row below linking to /blog/<slug>/
+      The deploy workflow auto-publishes anything under layouts/blog/posts/.
+    -->
+    <p class="empty-state">No posts yet — check back soon.</p>
   </div>
 </section>
 

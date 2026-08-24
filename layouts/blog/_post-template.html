@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Publications — Ananya D</title>
+<title>POST TITLE — Ananya D</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23271510'/><stop offset='100%25' stop-color='%23b87b6a'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='72' font-family='Georgia,serif' font-size='58' font-style='italic' font-weight='400' fill='%23fefaf6' text-anchor='middle'>A</text></svg>"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -52,9 +52,8 @@ nav{
 
 /* ─── SHARED SECTION ─── */
 .section{padding:7rem 3.5rem;}
-.section.alt{background:var(--cream);}
 
-.s-top{margin-bottom:4rem;}
+.s-top{margin-bottom:3rem;}
 .s-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -67,42 +66,33 @@ nav{
 
 .s-title{
   font-family:'Instrument Serif',serif;
-  font-size:clamp(2rem,3.5vw,3rem);
-  line-height:1.1;color:var(--plum);
+  font-size:clamp(1.9rem,3.2vw,2.6rem);
+  line-height:1.15;color:var(--plum);
 }
-.s-title em{font-style:italic;color:var(--dusty);}
 .s-sub{
   font-size:.92rem;font-weight:300;color:var(--muted);
-  max-width:36rem;line-height:1.85;margin-top:.85rem;
+  line-height:1.85;margin-top:.85rem;
 }
 .ra-link{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dk);text-decoration:none;border-bottom:1.5px solid rgba(78,114,68,.3);padding-bottom:1px;transition:all .2s;}
 .ra-link:hover{border-color:var(--sage-dk);}
 
-/* ─── PUBLICATIONS ─── */
-.pub-list{display:flex;flex-direction:column;}
-.pub-row{
-  display:grid;grid-template-columns:5rem 1fr auto;
-  gap:2rem;padding:2rem 0;
-  border-bottom:1px solid var(--rule);align-items:start;
-  transition:background-color .2s;
-}
-.pub-row:hover{background-color:var(--cream);}
-.pub-row:first-child{border-top:1px solid var(--rule);}
-.pub-yr{font-family:'Instrument Serif',serif;font-style:italic;font-size:.92rem;color:var(--dusty);padding-top:.2rem;}
-.pub-pill{display:inline-block;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.18rem .6rem;border-radius:50px;margin-bottom:.5rem;}
-.pp-chi{background:rgba(140,61,42,.1);color:var(--deep);}
-.pp-facct{background:rgba(140,61,42,.1);color:var(--deep);}
-.pp-nat{background:rgba(78,114,68,.1);color:var(--sage-dk);}
-.pp-cscw{background:var(--amber-lt);color:var(--amber);}
-.pp-preprint{background:var(--amber-lt);color:var(--amber);}
-.pub-title{font-family:'Instrument Serif',serif;font-size:1rem;color:var(--plum);line-height:1.35;margin-bottom:.4rem;}
-.pub-authors{font-size:.72rem;font-weight:500;color:var(--dusty);margin-bottom:.4rem;}
-.pub-desc{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.7;}
-.pub-links{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;}
-.pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;}
-.pub-lnk:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
-.pub-lnk-zenodo{background:var(--sage-dk);color:#fff;border-color:var(--sage-dk);box-shadow:0 2px 6px rgba(78,114,68,.35);}
-.pub-lnk-zenodo:hover{background:#3d5c36;border-color:#3d5c36;color:#fff;}
+/* ─── POST BODY ─── */
+.post-wrap{max-width:42rem;margin:0 auto;}
+.post-body{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.9;}
+.post-body h1,.post-body h2,.post-body h3{font-family:'Instrument Serif',serif;color:var(--plum);line-height:1.25;margin:2.2rem 0 .9rem;}
+.post-body h1{font-size:1.6rem;}
+.post-body h2{font-size:1.35rem;}
+.post-body h3{font-size:1.1rem;}
+.post-body p{margin-bottom:1.3rem;}
+.post-body a{color:var(--deep);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px;}
+.post-body a:hover{text-decoration-color:var(--deep);}
+.post-body ul,.post-body ol{margin:0 0 1.3rem 1.4rem;}
+.post-body li{margin-bottom:.5rem;}
+.post-body blockquote{border-left:2px solid var(--dusty);padding-left:1.2rem;color:var(--faint);font-style:italic;margin:1.5rem 0;}
+.post-body code{background:var(--cream);padding:.15rem .4rem;border-radius:4px;font-size:.85em;}
+.post-body pre{background:var(--cream);padding:1rem 1.2rem;border-radius:8px;overflow-x:auto;margin-bottom:1.3rem;}
+.post-body pre code{background:none;padding:0;}
+.post-body img{max-width:100%;border-radius:8px;margin:1.5rem 0;}
 
 /* ─── FOOTER ─── */
 footer{
@@ -121,9 +111,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   nav{padding:0 1.5rem;}
   .n-links{display:none;}
   .section{padding:5rem 1.75rem;}
-  .pub-row{grid-template-columns:1fr;}
-  .pub-yr{display:none;}
-  .pub-links{flex-direction:row;align-items:flex-start;}
 }
 </style>
 </head>
@@ -140,24 +127,17 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   <a class="n-contact" href="/#contact">Get in Touch</a>
 </nav>
 
-<!-- PUBLICATIONS -->
+<!-- POST -->
 <section class="section" style="padding-top:9rem;">
-  <div class="s-top reveal">
-    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Publications</span></div>
-    <h2 class="s-title">All <em>publications</em></h2>
-    <p class="s-sub">The complete list of peer-reviewed papers and working papers. <a class="ra-link" href="/#publications">View selected publications →</a></p>
-  </div>
-
-  <div class="pub-list">
-    <div class="pub-row reveal">
-      <div class="pub-yr">2026</div>
-      <div>
-        <span class="pub-pill pp-preprint">Working Paper</span>
-        <div class="pub-title">Identity Persistence in AI-Generated Video: A Sequence Evaluation Framework for Founder-Led Outbound</div>
-        <div class="pub-authors">Ananya Das</div>
-        <div class="pub-desc">A framework for evaluating identity consistency across sequences of AI-generated video, grounded in founder-led outbound experimentation at Pulse AI.</div>
-      </div>
-      <div class="pub-links"><a class="pub-lnk pub-lnk-zenodo" href="https://zenodo.org/records/21620531" target="_blank" rel="noopener">Zenodo</a></div>
+  <div class="post-wrap">
+    <a class="ra-link" href="/blog/" style="display:inline-block;margin-bottom:2.5rem;">← Back to Blog</a>
+    <div class="s-top reveal">
+      <div class="s-eyebrow neutral"><span class="s-label sl-phd">Month Year</span></div>
+      <h1 class="s-title">Post Title</h1>
+      <p class="s-sub">One-line summary of the post (optional).</p>
+    </div>
+    <div class="post-body reveal">
+      <p>Post content goes here. Replace this whole block with the real post, using the .post-body typography rules above (h2/h3, p, a, ul/ol, blockquote, code/pre, img) as needed.</p>
     </div>
   </div>
 </section>
@@ -171,8 +151,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
-      const idx=Array.from(e.target.parentNode.children).indexOf(e.target);
-      e.target.style.transitionDelay=(idx%4)*.1+'s';
       e.target.classList.add('on');
       io.unobserve(e.target);
     }

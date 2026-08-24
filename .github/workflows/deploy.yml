@@ -30,8 +30,18 @@ jobs:
           mkdir -p _site/images
           mkdir -p _site/publications
           mkdir -p _site/uploads
+          mkdir -p _site/blog
           cp layouts/landing/list.html _site/index.html
           cp layouts/publications/list.html _site/publications/index.html
+          cp layouts/blog/list.html _site/blog/index.html
+          if [ -d layouts/blog/posts ]; then
+            for f in layouts/blog/posts/*.html; do
+              [ -e "$f" ] || continue
+              slug=$(basename "$f" .html)
+              mkdir -p "_site/blog/$slug"
+              cp "$f" "_site/blog/$slug/index.html"
+            done
+          fi
           cp -r static/images/. _site/images/
           cp -r static/uploads/. _site/uploads/
           cp "static/images/Firefly_Gemini Flash_change the portrait color to the background color of the second banner image without  800479 (1).png" _site/images/profile.png
