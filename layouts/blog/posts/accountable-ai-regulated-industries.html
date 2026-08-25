@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Blog — Ananya D</title>
+<title>What "Accountability" Actually Means for AI in Regulated Industries — Ananya D</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' stop-color='%23271510'/><stop offset='100%25' stop-color='%23b87b6a'/></linearGradient></defs><rect width='100' height='100' rx='22' fill='url(%23g)'/><text x='50' y='72' font-family='Georgia,serif' font-size='58' font-style='italic' font-weight='400' fill='%23fefaf6' text-anchor='middle'>A</text></svg>"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -52,9 +52,8 @@ nav{
 
 /* ─── SHARED SECTION ─── */
 .section{padding:7rem 3.5rem;}
-.section.alt{background:var(--cream);}
 
-.s-top{margin-bottom:4rem;}
+.s-top{margin-bottom:3rem;}
 .s-eyebrow{
   display:flex;align-items:center;gap:.75rem;
   font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
@@ -67,36 +66,33 @@ nav{
 
 .s-title{
   font-family:'Instrument Serif',serif;
-  font-size:clamp(2rem,3.5vw,3rem);
-  line-height:1.1;color:var(--plum);
+  font-size:clamp(1.9rem,3.2vw,2.6rem);
+  line-height:1.15;color:var(--plum);
 }
-.s-title em{font-style:italic;color:var(--dusty);}
 .s-sub{
   font-size:.92rem;font-weight:300;color:var(--muted);
-  max-width:36rem;line-height:1.85;margin-top:.85rem;
+  line-height:1.85;margin-top:.85rem;
 }
 .ra-link{font-size:.72rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--sage-dk);text-decoration:none;border-bottom:1.5px solid rgba(78,114,68,.3);padding-bottom:1px;transition:all .2s;}
 .ra-link:hover{border-color:var(--sage-dk);}
 
-/* ─── POST LIST (reuses publication-row layout) ─── */
-.pub-list{display:flex;flex-direction:column;}
-.pub-row{
-  display:grid;grid-template-columns:5rem 1fr auto;
-  gap:2rem;padding:2rem 0;
-  border-bottom:1px solid var(--rule);align-items:start;
-  transition:background-color .2s;
-}
-.pub-row:hover{background-color:var(--cream);}
-.pub-row:first-child{border-top:1px solid var(--rule);}
-.pub-yr{font-family:'Instrument Serif',serif;font-style:italic;font-size:.92rem;color:var(--dusty);padding-top:.2rem;}
-.pub-title{font-family:'Instrument Serif',serif;font-size:1.1rem;color:var(--plum);line-height:1.35;margin-bottom:.4rem;}
-.pub-title a{color:inherit;text-decoration:none;}
-.pub-title a:hover{color:var(--deep);}
-.pub-desc{font-size:.78rem;font-weight:300;color:var(--muted);line-height:1.7;}
-.pub-links{display:flex;flex-direction:column;gap:.35rem;align-items:flex-end;}
-.pub-lnk{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.22rem .6rem;border-radius:50px;border:1px solid var(--rule);color:var(--deep);text-decoration:none;white-space:nowrap;transition:all .15s;}
-.pub-lnk:hover{background:var(--deep);color:#fff;border-color:var(--deep);}
-.empty-state{font-size:.85rem;font-weight:300;color:var(--muted);padding:2rem 0;border-top:1px solid var(--rule);}
+/* ─── POST BODY ─── */
+.post-wrap{max-width:42rem;margin:0 auto;}
+.post-body{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.9;}
+.post-body h1,.post-body h2,.post-body h3{font-family:'Instrument Serif',serif;color:var(--plum);line-height:1.25;margin:2.2rem 0 .9rem;}
+.post-body h1{font-size:1.6rem;}
+.post-body h2{font-size:1.35rem;}
+.post-body h3{font-size:1.1rem;}
+.post-body p{margin-bottom:1.3rem;}
+.post-body a{color:var(--deep);text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:2px;}
+.post-body a:hover{text-decoration-color:var(--deep);}
+.post-body ul,.post-body ol{margin:0 0 1.3rem 1.4rem;}
+.post-body li{margin-bottom:.5rem;}
+.post-body blockquote{border-left:2px solid var(--dusty);padding-left:1.2rem;color:var(--faint);font-style:italic;margin:1.5rem 0;}
+.post-body code{background:var(--cream);padding:.15rem .4rem;border-radius:4px;font-size:.85em;}
+.post-body pre{background:var(--cream);padding:1rem 1.2rem;border-radius:8px;overflow-x:auto;margin-bottom:1.3rem;}
+.post-body pre code{background:none;padding:0;}
+.post-body img{max-width:100%;border-radius:8px;margin:1.5rem 0;}
 
 /* ─── FOOTER ─── */
 footer{
@@ -115,9 +111,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   nav{padding:0 1.5rem;}
   .n-links{display:none;}
   .section{padding:5rem 1.75rem;}
-  .pub-row{grid-template-columns:1fr;}
-  .pub-yr{display:none;}
-  .pub-links{flex-direction:row;align-items:flex-start;}
 }
 </style>
 </head>
@@ -134,30 +127,35 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
   <a class="n-contact" href="/#contact">Get in Touch</a>
 </nav>
 
-<!-- BLOG -->
+<!-- POST -->
 <section class="section" style="padding-top:9rem;">
-  <div class="s-top reveal">
-    <div class="s-eyebrow neutral"><span class="s-label sl-phd">Blog</span></div>
-    <h2 class="s-title">Notes &amp; <em>writing</em></h2>
-    <p class="s-sub">Thoughts on AI, research, and building — posted as they come.</p>
-  </div>
+  <div class="post-wrap">
+    <a class="ra-link" href="/blog/" style="display:inline-block;margin-bottom:2.5rem;">← Back to Blog</a>
+    <div class="s-top reveal">
+      <div class="s-eyebrow neutral"><span class="s-label sl-phd">August 2026</span></div>
+      <h1 class="s-title">What "Accountability" Actually Means for AI in Regulated Industries</h1>
+      <p class="s-sub">Notes on why "accountable AI" can't just mean better model performance — and what it demands instead.</p>
+    </div>
+    <div class="post-body reveal">
+      <p>"Accountable AI" gets used as a synonym for "good AI" often enough that it's worth being precise about what it actually requires. In healthcare, finance, and legal services — the industries I spend most of my time thinking about — accountability isn't a property of a model. It's a property of a system: who made a decision, on what basis, and who can be asked to answer for it when it goes wrong.</p>
 
-  <div class="pub-list">
-    <!--
-      To add a new post:
-      1. Add a page at layouts/blog/posts/<slug>.html (copy layouts/blog/_post-template.html)
-      2. Add a row below linking to /blog/<slug>/
-      The deploy workflow auto-publishes anything under layouts/blog/posts/.
-    -->
-    <div class="pub-row reveal">
-      <div class="pub-yr">2026</div>
-      <div>
-        <div class="pub-title"><a href="/blog/accountable-ai-regulated-industries/">What "Accountability" Actually Means for AI in Regulated Industries</a></div>
-        <div class="pub-desc">Notes on why "accountable AI" can't just mean better model performance — and what it demands instead.</div>
-      </div>
-      <div class="pub-links">
-        <a class="pub-lnk" href="/blog/accountable-ai-regulated-industries/">Read</a>
-      </div>
+      <h2>The gap between performance and accountability</h2>
+      <p>A model can be highly accurate and still be unaccountable. If a lending decision, a diagnosis flag, or a compliance determination can't be traced back to the inputs and logic that produced it, no benchmark score changes that. Regulated industries have spent decades building processes around exactly this kind of traceability for human decision-makers — audit trails, sign-off chains, documented rationale. AI systems deployed into those workflows inherit that expectation whether or not they were built to meet it.</p>
+
+      <p>This is the gap I keep running into in conversations with people actually deploying these systems: the tooling optimizes for output quality, and the organization needs something closer to a paper trail.</p>
+
+      <h2>What accountability actually requires</h2>
+      <ul>
+        <li><strong>Traceable decisions.</strong> Every consequential output needs a reconstructable path back to its inputs — not just a confidence score.</li>
+        <li><strong>Preserved human oversight.</strong> Someone with real authority to intervene has to be in the loop before consequential outcomes are final, not just nominally "in the loop" after the fact.</li>
+        <li><strong>Deployment-specific evaluation.</strong> A general benchmark doesn't tell you how a system behaves on your data, in your workflow, under your failure modes. Accountability has to be validated in context, not inherited from a leaderboard.</li>
+        <li><strong>Domain-literate design.</strong> Systems built without deep familiarity with how a regulated industry actually makes and defends decisions tend to bolt accountability on afterward — as logging, not as architecture. It shows.</li>
+      </ul>
+
+      <h2>Why this is where I'm building</h2>
+      <p>This is the problem I'm working on: infrastructure for AI accountability that's grounded in the specifics of regulated deployment, not retrofitted onto systems built for a different context. It's the same question I study in my research — what accountability mechanisms preserve meaningful oversight when AI takes on consequential decisions — applied to what people actually have to ship.</p>
+
+      <p>If you're inside a regulated industry wrestling with this — where the model works but the accountability story doesn't — I'd genuinely like to hear how it's showing up for you. <a href="/#contact">Reach out</a>; that's exactly the kind of conversation this is for.</p>
     </div>
   </div>
 </section>
@@ -171,8 +169,6 @@ footer span{font-size:.7rem;color:rgba(255,255,255,.18);letter-spacing:.05em;}
 const io = new IntersectionObserver(entries=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
-      const idx=Array.from(e.target.parentNode.children).indexOf(e.target);
-      e.target.style.transitionDelay=(idx%4)*.1+'s';
       e.target.classList.add('on');
       io.unobserve(e.target);
     }
