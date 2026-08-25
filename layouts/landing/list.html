@@ -452,21 +452,19 @@ nav{
 .ch-list{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:.85rem;}
 .ch-row{
   display:flex;align-items:center;justify-content:center;
-  width:56px;height:56px;border:1px solid rgba(255,255,255,.08);border-radius:12px;
+  width:56px;height:56px;border:1px solid #fff;border-radius:12px;
   text-decoration:none;color:rgba(254,250,246,.85);transition:all .2s;
+  background:#fff;
 }
-.ch-row:hover{border-color:rgba(255,255,255,.25);background:rgba(255,255,255,.04);}
-.ch-icon{width:24px;height:24px;flex-shrink:0;transition:filter .2s,opacity .2s;opacity:.85;}
-.ch-row:hover .ch-icon{filter:brightness(1.2);opacity:1;}
+.ch-row:hover{background:#f0f0f0;border-color:#f0f0f0;}
+.ch-icon{width:24px;height:24px;flex-shrink:0;transition:filter .2s;}
+.ch-row:hover .ch-icon{filter:brightness(1.15);}
 .ch-row.email .ch-icon{fill:#ea4335;}
 .ch-row.cv .ch-icon{fill:var(--amber);}
 .ch-row.scholar .ch-icon{fill:#4285f4;}
-.ch-row.github .ch-icon{fill:#f0f6fc;}
+.ch-row.github .ch-icon{fill:#000;}
 .ch-row.linkedin .ch-icon{fill:#0a66c2;}
-.ch-row.twitter{background:#fff;border-color:#fff;}
-.ch-row.twitter .ch-icon{fill:#000;opacity:1;}
-.ch-row.twitter:hover{background:#f0f0f0;border-color:#f0f0f0;}
-.ch-row.twitter:hover .ch-icon{filter:none;}
+.ch-row.twitter .ch-icon{fill:#000;}
 
 /* ─── FOOTER ─── */
 footer{
