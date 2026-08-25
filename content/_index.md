@@ -117,6 +117,10 @@ sections:
         {{< icon name="music" pack="fas" >}} **Classical Dance**
 
         I'm a trained Bharatanatyam dancer. The precision and discipline of classical form — learning to embody abstract emotion through codified movement — is something I carry into research: rigor as a vehicle for expression.
+
+        {{< icon name="utensils" pack="fas" >}} **Cooking & Baking**
+
+        I occasionally dabble in haute cuisine — there's something deeply satisfying about pulling off a dish that takes real technique. Baking is my other kitchen obsession: I love how it demands precision and patience in equal measure, and how that patience actually pays off.
     design:
       columns: '1'
 
